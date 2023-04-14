@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    </head>
+    
+    <body>
+        <div class="container pt-4" >
+            <div class="d-flex justify-content h-100">
+                <div class="card">
+                    <div class="card bg-muted">
+                    <div class="card-header">
+                            <h3>login page</h3>
+                        <div class="d-flex justify-content-end social_icon">
+                            <span style="background-color:#FFC312;font-size:30px; margin-left:10px;"><i class="fab fa-facebook-square" ></i></span>
+                            <span style="background-color:#FFC312;font-size:30px; margin-left:10px;"><i class="fab fa-google-plus-square"></i></span>
+                            <span  style="background-color:#FFC312; font-size:30px; ; margin-left:10px;" ><i class="fab fa-twitter-square"></i></span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form action="login" method="post">
+                       {% csrf_token %}
+                        <div class="form-group input-group">
+                            <label for="nm">USERNAME  </label><br>
+                            <div class"input-group-prepend">
+                                <span class="input-group-text" style="background-color:#FFC312;"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" name="username"class="form-control" placeholder="USERNAME"/><br>
+                        </div>
+
+                        <div class="form-group input-group">
+                            <label for="pwd"> PASSWORD  </label>
+                            <div class"input-group-prepend">
+                                <span class="input-group-text"style="background-color:#FFC312;"><i class="fas fa-key"></i></span>
+                            </div><bR>
+                            
+                            <input type="password" name='password' placeholder="password"/><br>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-warning"><input type="submit" value="login" class="btn float-right login_btn"/></button>
+                        </div>
+                    </form>
+                 </div>
+        
+    
+            <div class="card-footer">
+                    <div class="d-flex justify-content-center links"> Don't have an account?<a href="login" value="login">login</a></div>
+            </div>     
+                <div class="d-flex justify-content-center"> <a href="#">Forgot your password?</a></div>
+                {% for message in messages %}
+       {{message}}
+       {% endfor %}
+            </div></div>
+    </div>
+</div>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+    </head>
+    <body>
+      
+       <div align="center" width="40%"  >
+   
+       <form action="" method="POST"  style="border:3px solid red ;margin:50px 400px 50px 500px; padding:70px;">
+         {% csrf_token %}
+            <h1  class="fa fa-align-justify" aria-hidden="true">Please sign up</h1></br><br>
+         
+           <div class="form-group " >
+              <label for="nm">USERNAME :</label>
+            <input type="text" name="username" placeholder="please enter name" /><br>
+          </div>
+          <div class="form-group">
+            <label for="fn">FIRSTNAME :</label>
+           <input type="text" name="firstname" placeholder="please enter first name" /><br>
+         </div>
+           <div class="form-group">
+            <label for="ln">LASTNAME :</label>
+           <input type="text" name="lastname" placeholder="please enter last name" /><br>
+         </div>
+           <div class="form-group">
+            <label for="email">  EMAIL :</label>
+         <input type="text" name="email"  placeholder="please enter Email"/><br>
+         </div>
+           <div class="form-group">
+            <label for="pwd"> PASSWORD :</label>
+          <input type="text" name="password" placeholder="please enter Password"/><br>
+         </div>
+           <div class="form-group">
+            <label for="adrs"> ADDRESS</label>
+            <input type="text" name="address"placeholder="please enter Address" /><br>
+         </div>
+         <div class="form-group">
+            <label for="mbl">MOBILE</label>
+          <input type="text" name="mobile"placeholder="please enter mobile" /><br>
+         </div>
+         <div class="btn group btn-group-lg">
+          <button class="btn btn-primary box-size content-box" ><input type="submit" value="signup" /></button><br></div>
+       </form>
+    
+       
+      </div>
+    </div>
+    </body>
+</html>

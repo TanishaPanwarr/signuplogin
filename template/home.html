@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+    </head>
+    <body>
+        <h1>welcome to home page</h1>
+        {% if user.is_authenticate%}
+        {{user.username}}
+        {% endif %}
+    </body>
+</html>
